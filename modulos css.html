@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de CSS</title>
+    <style>
+        /* 1. CSS Box Model */
+        .box1 {
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 20px;
+            box-sizing: border-box;
+            background-color: #e9ecef;
+        }
+
+        /* 2. CSS Selectors */
+        .highlight {
+            background-color: yellow;
+        }
+
+        input[type="text"] {
+            border: 2px solid blue;
+        }
+
+        /* 3. CSS Layout */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e9ecef;
+            padding: 10px;
+        }
+
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            background-color: #e9ecef;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: #28a745;
+            color: white;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 4. CSS Color */
+        .colored-text {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px;
+        }
+
+        .transparent-box {
+            background-color: rgba(0, 86, 179, 0.5);
+            color: white;
+            padding: 10px;
+        }
+
+        /* 5. CSS Typography */
+        .custom-font {
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+        }
+
+        .spaced-uppercase {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* 6. CSS Animations and Transitions */
+        .transition-box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(187, 74, 74);
+            transition: background-color 0.5s ease;
+        }
+
+        .transition-box:hover {
+            background-color: rgb(134, 179, 134);
+        }
+
+        @keyframes slide {
+            from { transform: translateX(0); }
+            to { transform: translateX(100px); }
+        }
+
+        .animate-box {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(33, 195, 216);
+            animation: slide 2s infinite alternate;
+        }
+
+        /* 7. CSS Media Queries */
+        body {
+            background-color: rgb(235, 177, 212);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                background-color: rgb(73, 157, 185);
+            }
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        @media (max-width: 800px) {
+            p {
+                font-size: 14px;
+            }
+        }
+
+        /* 8. CSS Backgrounds and Borders */
+        .background-image {
+            background-image: url('https://static.wikia.nocookie.net/blazbluextag/images/9/96/Platinum_the_Trinity_%28BlazBlue_Cross_Tag_Battle%2C_Character_Select_Artwork%29.png/revision/latest?cb=20180908145339');
+            background-size: cover;
+            width: 800px;
+            height: 700px;
+            background-color: #f8f9fa;
+        }
+
+        .rounded-border {
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        /* 9. CSS Pseudo-Elements and Pseudo-Classes */
+        .pseudo-before::before {
+            content: "Nota: ";
+            color: red;
+            font-weight: bold;
+        }
+
+        .hover-effect {
+            color: black;
+            transition: color 0.3s;
+        }
+
+        .hover-effect:hover {
+            color: orange;
+        }
+
+        /* 10. CSS Variables (Custom Properties) */
+        :root {
+            --primary-color: #9fcae7;
+            --secondary-color: #c2ebd3;
+            --main-padding: 10px;
+        }
+
+        .box-variable {
+            background-color: var(--primary-color);
+            color: rgb(35, 97, 76);
+            padding: var(--main-padding);
+        }
+
+        .box-variable-large {
+            --main-padding: 20px;
+            background-color: var(--secondary-color);
+            color: rgb(48, 24, 24);
+            padding: var(--main-padding);
+        }
+
+        /* 11. CSS Transforms */
+        .transform-scale {
+            width: 200px;
+            height: 200px;
+            background-color: #d2e490;
+            transform: scale(1.5);
+        }
+
+        .transform-rotate {
+            width: 200px;
+            height: 200px;
+            background-color: hsl(192, 100%, 50%);
+            transform: rotate(45deg);
+        }
+
+        /* 12. CSS Filters */
+        .filter-blur {
+            width: 800px;
+            height: 700px;
+            background-image: url('https://i.pinimg.com/originals/1b/96/de/1b96de810f76284c83c8246ac1d0f115.jpg');
+            filter: blur(5px);
+        }
+
+        .filter-grayscale {
+            width: 800px;
+            height: 700px;
+            background-image: url('https://i.pinimg.com/originals/1b/96/de/1b96de810f76284c83c8246ac1d0f115.jpg');
+            filter: grayscale(100%);
+        }
+
+        /* 13. CSS Clipping and Masking */
+        .clip-path-example {
+            width: 500px;
+            height: 400px;
+            background-color: #e78c91;
+            clip-path: circle(50%);
+        }
+
+        .mask-image-example {
+            width: 1800px;
+            height: 900px;
+            background-image: url('https://p325k7wa.twic.pics/high/sand-land/sand-land/00-page-setup/update/SandLand_Website_KF_4.jpg?twic=v1/resize=700/step=10/quality=80');
+            mask-image: url('https://p325k7wa.twic.pics/high/sand-land/sand-land/00-page-setup/update/SandLand_Website_KF_4.jpg?twic=v1/resize=700/step=10/quality=80');
+            mask-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos los principales Modulos de CSS</h1>
+    
+    <h2>1. CSS Box Model</h2>
+    <div class="box1">Caja 1 (Box Model)</div>
+    <div class="box2">Caja 2 (Box Model con border-box)</div>
+    
+    <h2>2. CSS Selectors</h2>
+    <p class="highlight">Este párrafo está resaltado en amarillo.</p>
+    <input type="text" placeholder="Campo de texto">
+    <input type="password" placeholder="Campo de contraseña">
+    
+    <h2>3. CSS Layout</h2>
+    <div class="flex-container">
+        <div class="flex-item">Elemento 1</div>
+        <div class="flex-item">Elemento 2</div>
+        <div class="flex-item">Elemento 3</div>
+    </div>
+    
+    <div class="grid-container">
+        <div class="grid-item">Elemento 1</div>
+        <div class="grid-item">Elemento 2</div>
+        <div class="grid-item">Elemento 3</div>
+    </div>
+    
+    <h2>4. CSS Color</h2>
+    <p class="colored-text">Este texto tiene un fondo azul y texto blanco.</p>
+    <p class="transparent-box">Este texto tiene un fondo azul con 50% de opacidad.</p>
+    
+    <h2>5. CSS Typography</h2>
+    <p class="custom-font">Texto con fuente Arial y tamaño de 20px.</p>
+    <p class="spaced-uppercase">Texto en mayúsculas con espaciado entre letras.</p>
+    
+    <h2>6. CSS Animations and Transitions</h2>
+    <div class="transition-box">Pasa el cursor sobre este cuadro.</div>
+    <div class="animate-box"></div>
+    
+    <h2>7. CSS Media Queries</h2>
+    <p>El fondo de la página cambia según el tamaño de la pantalla.</p>
+    
+    <h2>8. CSS Backgrounds and Borders</h2>
+    <div class="background-image">Fondo con imagen</div>
+    <div class="rounded-border">Cuadro con bordes redondeados</div>
+    
+    <h2>9. CSS Pseudo-Elements and Pseudo-Classes</h2>
+    <p class="pseudo-before">Texto con pseudo-elemento antes.</p>
+    <p class="hover-effect">Pasa el cursor sobre este texto para cambiar el color.</p>
+    
+    <h2>10. CSS Variables (Custom Properties)</h2>
+    <div class="box-variable">Caja con color primario y padding por defecto.</div>
+    <div class="box-variable-large">Caja con color secundario y padding aumentado.</div>
+    
+    <h2>11. CSS Transforms</h2>
+    <div class="transform-scale">Escala</div>
+    <div class="transform-rotate"> Rotación</div>
+    
+    <h2>12. CSS Filters</h2>
+    <div class="filter-blur">Imagen con desenfoque</div>
+    <div class="filter-grayscale">Imagen en escala de grises</div>
+    
+    <h2>13. CSS Clipping and Masking</h2>
+    <div class="clip-path-example">Clip Path: Círculo</div>
+    <div class="mask-image-example">Máscara de Imagen</div>
+</body>
+</html>

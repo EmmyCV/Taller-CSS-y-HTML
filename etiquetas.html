@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con todas las etiquetas de HTML 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* tabla basica */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplo de uso de etiquetas HTML 4</h1>
+    <hr>
+
+    <address>
+        <strong>Dirección de Contacto:</strong><br>
+        Emmy Carrero<br>
+        Calle 11 # 123<br>
+        Cucuta<br>
+        Teléfono: (57) 555-5555
+    </address>
+
+    <p>Esta es una cita con la etiqueta abbr, <abbr title="HyperText Markup Language">HTML</abbr>:</p>
+    <blockquote cite="https://www.example.com">
+        “¡Dime cuál es tu nombre señorial en las riberas de la Noche plutónica!». El cuervo exclamó: «¡Nunca más!»
+        .”
+    </blockquote>
+
+    <p>ejemplo de un enlace con la etiqueta <Enlace href="https://www.example.com">a</Enlace>.</p>
+
+    <p>Texto en negrita con la etiqueta b, <b>HTML</b>.</p>
+
+    <p>Ejemplo de cambio de dirección de texto con la etiqueta bdo,  <bdo dir="rtl"> El cuervo</bdo>.</p>
+
+    <br>
+
+    <p>botón de ejemplo. <button>Botón</button> .</p>
+
+    <p><code>&lt;html&gt; ... &lt;/html&gt;</code>.</p>
+
+    <table>
+        <caption>Tabla de Ejemplo</caption>
+        <colgroup>
+            <col style="background-color:lightgrey">
+            <col style="background-color:white">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">Encabezado 1</th>
+                <th scope="col">Encabezado 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cita:</td>
+                <td><cite> “¡Dime cuál es tu nombre señorial en las riberas de la Noche plutónica!». El cuervo exclamó: «¡Nunca más!»
+                    .”</cite></td>
+            </tr>
+            <tr>
+                <td>Autor del Libro:</td>
+                <td><cite> Edgar Allan Poe </cite></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Pie de tabla</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>Ejemplo de una lista desordenada:</p>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+        <li>Elemento 6</li>
+        <li>Elemento 7</li>
+        <li>Elemento 8</li>
+        
+    </ul>
+
+    <p>Ejemplo de una lista ordenada:</p>
+    <ol>
+        <li>Elemento A</li>
+        <li>Elemento B</li>
+        <li>Elemento C</li>
+        <li>Elemento D</li>
+        <li>Elemento E</li>
+        <li>Elemento F</li>
+        <li>Elemento G</li>
+        <li>Elemento H</li>
+    </ol>
+
+    <form>
+        <fieldset>
+            <legend>Formulario de Ejemplo</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+
+    <p>Texto en cursiva con la etiqueta i,  <i>Claymore </i>.</p>
+
+    <p>Un ejemplo de imagen:</p>
+    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/03/Claymore-10-Hidden-Details-About-The-Main-Characters-Everyone-Completely-Missed-featured-image.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5" alt="Imagen de ejemplo">
+
+  
+    <h1>Ejemplo de Incrustación de Contenido con iframe</h1>
+    
+    
+    <p>Incrustar un mapa de Google Maps usando <code>iframe</code>:</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019160493992!2d144.96315791531848!3d-37.81410787975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xfb7b5d7a58ef7f17!2sFederation%20Square!5e0!3m2!1ses!2s!4v1613984034013!5m2!1ses!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+   
+
+
+    <p>Texto insertado con la etiqueta <ins>ins</ins>.</p>
+
+    <p>Texto eliminado con la etiqueta <del>del</del>.</p>
+
+    <p>Texto en pequeño con la etiqueta <small>small</small>.</p>
+
+    <p>Ejemplo de un código para el usuario con la etiqueta <kbd>kbd</kbd>.</p>
+
+    <p>Ejemplo de una variable con la etiqueta <var>x</var>.</p>
+
+    <p>Ejemplo de una cita corta con la etiqueta <q>cita</q>.</p>
+
+    <p>Ejemplo de un fragmento preformateado con la etiqueta <pre>Texto preformateado</pre>.</p>
+
+    <p>Texto en subíndice con la etiqueta <sub>sub</sub> y superíndice con la etiqueta <sup>sup</sup>.</p>
+
+    <script>
+        // Ejemplo de JavaScript insertado
+        console.log("Hola, Mundo");
+    </script>
+
+    <noscript>
+        Tu navegador no soporta JavaScript.
+    </noscript>
+
+</body>
+</html>
